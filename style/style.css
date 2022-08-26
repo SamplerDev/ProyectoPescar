@@ -1,0 +1,1089 @@
+/* Global */
+* {
+  cursor: none;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --curve: 40;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-purple: #6b4060;
+  --color-orange1: #fb7304;
+  --color-orange2: rgb(255, 141, 65);
+  --color-orange3: #ff3450;
+  --color-blue: #1f2d8d;
+  --color-lightgray: #eee;
+  --color-darkgray: rgb(83, 83, 83);
+  --color-box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-size: 16px;
+  letter-spacing: 2px;
+}
+
+/* ScrollBar */
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-box-shadow);
+  border-radius: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-orange1);
+  border-radius: 16px;
+}
+
+/* CADA ETIQUETA DEL MENU LAS QUIERO CON COLOR BLANCO*/
+a {
+  color: var(--color-black);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* MIS ETIQUETAS DEL MENU LE SACO LOS ESTILOS QUE PUEDAN TENER*/
+ul {
+  list-style: none;
+}
+
+/* MI CONTENER DE TODA LA PAGINA WEB LA POSICIONO*/
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* LOGO ICONO MENU*/
+.nav-brand {
+  width: 75px;
+}
+
+/* NAVEGACIÓN */
+.nav-bar {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  padding: 20px 0;
+}
+
+/* NAVEGACIÓN IZQUIERDA */
+.nav-bar ul {
+  display: flex;
+  justify-content: flex-end;
+  flex: 1;
+}
+
+/* NAVEGACIÓN DERECHA LE DOY UN ESPACIO ENTRE CADA ETIQUETAS */
+.nav-bar ul li a {
+  padding: 15px;
+}
+
+/* NAVEGACIÓN DERECHA LE DOY UN ESTILO A CADA ETIQUETA */
+.nav-bar ul li a:hover {
+  border-bottom: 3px solid var(--color-purple);
+  color: var(--color-purple);
+}
+
+/* BOTON RESPONSIVE */
+.menu-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right: 36px;
+  display: none;
+}
+
+/*--------------------------------- PORTADA: PESCADOR + ICONO PESCAR ------------------------------ */
+
+#home {
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 100px;
+  gap: 150px;
+}
+
+.home-pescador-mobile {
+  display: none;
+}
+
+#intro p {
+  text-align: center;
+}
+
+/* ----------------------------------------- GLOBAL BODY ----------------------------------------- */
+
+#features,
+#contact,
+#social,
+#accordionExample {
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+
+/* SUBRAYO LOS H2 CON UNA IMÁGEN  */
+
+#contact h2 {
+  padding-bottom: 30px;
+  text-align: center;
+  background: url("../img/h2.png") no-repeat center bottom;
+}
+
+/* -------------- BELUUUU ----------------- CARDS HOME -------------------------------------------------------- */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 4rem 5vw;
+  padding: 0;
+  list-style-type: none;
+}
+
+.card {
+  position: relative;
+  display: block;
+  height: 100%;
+  border-radius: calc(var(--curve) * 1px);
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.card__image {
+  width: 100%;
+  height: auto;
+}
+
+.card__overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  border-radius: calc(var(--curve) * 1px);
+  background-color: var(--color-orange1);
+  transform: translateY(100%);
+  transition: 0.2s ease-in-out;
+}
+
+.card:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card__header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  padding: 2em;
+  border-radius: calc(var(--curve) * 1px) 0 0 0;
+  background-color: var(--color-orange1);
+  transform: translateY(-100%);
+  transition: 0.2s ease-in-out;
+}
+
+.card__arc {
+  width: 80px;
+  height: 150px;
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  z-index: 1;
+}
+
+.card:hover .card__header {
+  transform: translateY(0);
+}
+
+.card__thumb {
+  flex-shrink: 0;
+  width: 50px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.card__title {
+  font-size: 1em;
+  margin: 0 0 0.3em;
+  color: var(--color-white);
+}
+
+.card__description {
+  padding: 0 2em 2em;
+  margin: 0;
+  color: var(--color-white);
+  font-size: 0.9em;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+/* ----------------- SCROLL FOTOS --------------------------------------------------------------- */
+#sliderG {
+  overflow: hidden;
+  width: 100%;
+}
+#sliderG figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  animation: 30s slider infinite;
+}
+#sliderG figure img {
+  float: left;
+  width: 20%;
+}
+
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+/* ----------------- EXPERIENCIAS --------------------------------------------------------------- */
+
+/*Carrusel*/
+
+.experiencias-container {
+  display: flex;
+  justify-content: center;
+}
+
+#experiencias {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+  background: linear-gradient(to bottom, #ff850a, #ff3450);
+  color: #ffffff;
+  padding: 10px 20px;
+}
+
+#container-slider {
+  width: 100%;
+}
+
+#slider {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 355px;
+}
+
+#slider li {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+  transition: opacity 1s;
+  z-index: -1;
+  opacity: 0;
+}
+
+#container-slider .arrowPrev,
+#container-slider .arrowNext {
+  font-size: 25pt;
+  color: var(--color-darkgray);
+  cursor: pointer;
+  position: absolute;
+  margin-top: 130px;
+  z-index: 2;
+}
+
+#container-slider .arrowPrev {
+  left: 10%;
+}
+
+#container-slider .arrowNext {
+  right: 10%;
+}
+
+.listslider {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  left: 50%;
+  margin-top: 320px;
+  list-style: none;
+  transform: translateX(-50%);
+}
+.listslider li {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+}
+.listslider li a {
+  background: var(--color-darkgray);
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.item-select-slid {
+  background: linear-gradient(to bottom, #ff850a, #ff3450) !important;
+}
+
+/*Experiencias-Relatos*/
+
+a {
+  text-decoration: none;
+}
+
+.testimonial-box-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 90%;
+}
+.testimonial-box {
+  width: 800px;
+  box-shadow: 2px 2px 20px var(--color-box-shadow);
+  background-color: var(--color-lightgray);
+  padding: 20px;
+  margin: 15px;
+  cursor: pointer;
+}
+.profile-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+.profile-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+.profile {
+  display: flex;
+  align-items: center;
+}
+.name-user {
+  display: flex;
+  flex-direction: column;
+}
+.name-user strong {
+  color: var(--color-darkgray);
+  font-size: 1.1rem;
+  letter-spacing: 0.5px;
+}
+.name-user span {
+  color: #979797;
+  font-size: 0.8rem;
+  margin-top: 5px;
+  letter-spacing: 1px;
+}
+.box-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.client-comment p {
+  font-size: 0.9rem;
+  color: var(--color-darkgray);
+}
+.testimonial-box:hover {
+  transform: translateY(-10px);
+  transition: all ease 0.3s;
+}
+
+/* ---------------- COMPANIAS --------------------------------------------------------------- */
+#titulo-companias {
+  color: var(--color-darkgray);
+  text-align: center;
+  font-size: 1.4em;
+  letter-spacing: 0.3em;
+}
+.companias-asociadas {
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+.companias-asociadas img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+}
+
+/* -------------------------------------- FUNDACION PESCAR BOTÓN -------------------------------------- */
+
+/* CENTRO LA CAJA FUNDACION PESCAR */
+#button-pescar {
+  text-align: center;
+  margin: 120px 0px 120px 0px;
+}
+
+/* CRÉO LOS BORDES DEL BOTÓN */
+.pescar-btn {
+  padding: 25px 40px;
+  color: var(--color-black);
+  border: solid 1px var(--color-black);
+  font-weight: bold;
+}
+
+/* EFECTO PARA CUANDO PASAS EL MOUSE ENCIMA DEL BOTÓN */
+.pescar-btn:hover {
+  color: var(--color-orange1);
+  border: solid 1px var(--color-orange1);
+}
+
+/* ------------------------------------------- CONTACTO ------------------------------------------------ */
+
+/* CRÉO UNA FILA DE 3 COLUMNAS AUTO*/
+.contact-details {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 40px;
+  margin: 50px 0;
+}
+
+/* AJUSTO EL TAMAÑO DEL CONTENEDOR */
+.contact-details div {
+  width: 30%;
+  min-width: 350px;
+  flex-grow: 0;
+}
+
+/* CENTRAMOS EL TITULO CONTACTO Y LOS PARRAFOS */
+.contact-details h3,
+.contact-details p {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+div .light-box {
+  width: auto;
+}
+
+.light-box {
+  padding: 10px 0px;
+}
+
+.light-box:hover,
+.light-box:focus {
+  -webkit-box-shadow: 0px 3px 0px 0px var(--color-orange1);
+  -moz-box-shadow: 0px 3px 0px 0px var(--color-orange1);
+  box-shadow: 0px 3px 0px 0px var(--color-orange1);
+}
+
+.box-hover {
+  transition: all 500ms ease-in-out;
+  -webkit-transition: all 500ms ease-in-out;
+  -moz-transition: all 500ms ease-in-out;
+  -o-transition: all 500ms ease-in-out;
+}
+
+.box-hover:hover,
+.box-hover:focus {
+  transform: translate(0, -15px);
+  -webkit-transform: translate(0, -15px);
+  -ms-transform: translate(0, -15px);
+}
+
+/* ------------------------------------ FOLLOW @FundaciónPescar ---------------------------------------- */
+
+/* CENTRAMOS EL TITULO FOLLOW @FundaciónPescar */
+#social h2 {
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 30px;
+}
+
+/* CENTRAMOS LOS ICONOS FOLLOW @FundaciónPescar */
+.links {
+  display: flex;
+  justify-content: center;
+}
+
+/* SEPARAMOS LOS ICONOS FOLLOW @FundaciónPescar */
+.links a {
+  margin: 0 25px;
+}
+
+/* AGRANDAMOS LOS ICONOS FOLLOW @FundaciónPescar */
+.links a i {
+  font-size: 3rem;
+}
+
+/* EFECTO PARA CUANDO PASAS EL MOUSE ENCIMA DE LOS ICONOS FOLLOW @FundaciónPescar */
+.links a i:hover {
+  color: var(--color-orange1);
+}
+
+/* -------------------------- FOOTER Centro Pescar "Paths to the Future" ------------------------------ */
+
+#foot {
+  padding-block: 15px;
+  text-align: center;
+  background-color: var(--color-orange1);
+}
+
+/********************************************
+STYLE LaBeca
+*********************************************/
+
+/* ----------------------------------------- HOME -------------------------------------------------- */
+
+#home-LaBeca {
+  display: flex;
+  justify-content: center;
+}
+
+.img-roadmap {
+  width: 85%;
+}
+
+.img-roadmap-mobile {
+  display: none;
+}
+
+/* ------------------------------------------- ACORDEON -------------------------------------------- */
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.accordion dt > a {
+  text-align: center;
+  font-weight: 700;
+  padding: 2em;
+  display: block;
+  text-decoration: none;
+  color: var(--color-white);
+}
+.accordion dd {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  font-size: 1em;
+  line-height: 1.5em;
+}
+.accordion dd > p {
+  padding: 1em 2em 1em 2em;
+}
+
+.accordion {
+  position: relative;
+  background-color: var(--color-orange2);
+}
+
+.container-accordion {
+  max-width: 995px;
+  margin: 0 auto;
+  padding: 2em 0 2em 0;
+}
+
+.accordionTitle {
+  background-color: var(--color-blue);
+  border-bottom: 1px solid var(--color-box-shadow);
+}
+.accordionTitle:before {
+  content: "+";
+  font-size: 1.5em;
+  line-height: 0.5em;
+  float: left;
+  -moz-transition: -moz-transform 0.3s ease-in-out;
+  -o-transition: -o-transform 0.3s ease-in-out;
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+.accordionTitle:hover {
+  background-color: var(--color-orange2);
+}
+
+.accordionTitleActive {
+  background-color: var(--color-orange1);
+}
+.accordionTitleActive:before {
+  -webkit-transform: rotate(-225deg);
+  -moz-transform: rotate(-225deg);
+  transform: rotate(-225deg);
+}
+
+.accordionItem {
+  height: auto;
+  overflow: hidden;
+}
+@media all {
+  .accordionItem {
+    max-height: 50em;
+    -moz-transition: max-height 1s;
+    -o-transition: max-height 1s;
+    -webkit-transition: max-height 1s;
+    transition: max-height 1s;
+  }
+}
+@media screen and (min-width: 48em) {
+  .accordionItem {
+    max-height: 15em;
+    -moz-transition: max-height 0.5s;
+    -o-transition: max-height 0.5s;
+    -webkit-transition: max-height 0.5s;
+    transition: max-height 0.5s;
+  }
+}
+
+.accordionItemCollapsed {
+  max-height: 0;
+}
+
+.animateIn {
+  -webkit-animation-name: accordionIn;
+  -webkit-animation-duration: 0.65s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: normal;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  -moz-animation-name: normal;
+  -moz-animation-duration: 0.65s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-direction: alternate;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-fill-mode: both;
+  -moz-animation-delay: 0s;
+  animation-name: accordionIn;
+  animation-duration: 0.65s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 0s;
+}
+
+.animateOut {
+  -webkit-animation-name: accordionOut;
+  -webkit-animation-duration: 0.75s;
+  -webkit-animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+  -webkit-animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 0s;
+  -moz-animation-name: accordionOut;
+  -moz-animation-duration: 0.75s;
+  -moz-animation-iteration-count: 1;
+  -moz-animation-direction: alternate;
+  -moz-animation-timing-function: ease-in-out;
+  -moz-animation-fill-mode: both;
+  -moz-animation-delay: 0s;
+  animation-name: accordionOut;
+  animation-duration: 0.75s;
+  animation-iteration-count: 1;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+  animation-delay: 0s;
+}
+
+@-webkit-keyframes accordionIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes accordionIn {
+  0% {
+    opacity: 0;
+    -moz-transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    -moz-transform: scale(1);
+  }
+}
+@keyframes accordionIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes accordionOut {
+  0% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(0.8);
+  }
+}
+@-moz-keyframes accordionOut {
+  0% {
+    opacity: 1;
+    -moz-transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    -moz-transform: scale(0.8);
+  }
+}
+@keyframes accordionOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
+
+/********************************************
+STYLE Cursor-Custom
+*********************************************/
+.cursor {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: var(--color-blue);
+  opacity: 0.6;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width 0.3s, height 0.3s, opacity 0.3s;
+  z-index: 9999;
+}
+
+.cursorinnerhover {
+  width: 30px;
+  height: 30px;
+  opacity: 0.4;
+}
+
+/* -------------------------------------- MOVÍL RESPONSIVE 400px -------------------------------------- */
+@media (max-width: 400px) {
+  .cursor {
+    display: none;
+  }
+
+  .menu-btn {
+    color: var(--color-blue);
+    display: block;
+  }
+
+  /* LE DOY UN EFECTO A MI BOTÓN MENÚ */
+  .menu-btn:hover {
+    opacity: 0.5;
+  }
+
+  .nav-bar ul li a {
+    color: var(--color-white);
+  }
+
+  .nav-bar ul li a:hover {
+    border-bottom: 2px solid var(--color-orange1);
+    color: var(--color-orange1);
+  }
+
+  /* MEJORO MI NAVEGACION EN EL MENÚ */
+  .nav-bar ul.nav-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: var(--color-blue);
+    height: 100%;
+    padding: 20px 0px 0px 10px;
+    border-right: var(--color-orange1) 1px solid;
+    opacity: 0.9;
+    transform: translateX(-400px);
+    transition: transform 0.5s ease-in-out;
+  }
+
+  /* CORRIGO MI LETRA Y TAMAÑO DEL MENÚ */
+  .nav-bar ul.nav-menu li {
+    padding: 20px;
+    font-size: 15px;
+  }
+
+  /* QUE SE AMPLIE MI MENÚ CON LA ITERACCIÓN CON JS */
+  .nav-bar ul.nav-menu.show {
+    transform: translateX(-20px);
+  }
+
+  /* SEPARO MI LUPA DEL ICONO MENÚ */
+  .nav-bar ul.nav-menu-right {
+    margin-left: 36rem;
+  }
+
+  #home {
+    height: 460px;
+    margin: auto;
+  }
+
+  .home-icono {
+    display: none;
+  }
+
+  .home-pescador {
+    display: none;
+  }
+
+  .home-pescador-mobile {
+    display: flex;
+    width: 334px;
+  }
+
+  #titulo-companias {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+  }
+
+  .companias-asociadas {
+    margin-top: 110px;
+    margin-bottom: 110px;
+  }
+
+  .companias-asociadas img {
+    width: 90%;
+  }
+
+  #experiencias {
+    font-size: 1.5rem;
+  }
+
+  #slider {
+    min-height: 400px;
+  }
+
+  #container-slider .arrowPrev,
+  #container-slider .arrowNext {
+    font-size: 20pt;
+    margin-top: 250px;
+  }
+  #container-slider .arrowPrev {
+    left: 15px;
+  }
+  #container-slider .arrowNext {
+    right: 15px;
+  }
+
+  .listslider {
+    margin-top: 515px;
+  }
+
+  .testimonial-box {
+    padding: 20px;
+    margin: 55px;
+  }
+
+  .box-top {
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+  }
+
+  #button-pescar {
+    margin-top: 255px;
+  }
+
+  .contact-details {
+    gap: 45px;
+  }
+
+  /********************************************
+  STYLE LaBeca
+  *********************************************/
+
+  /* ------------------------ HOME -------------------------- */
+
+  .img-roadmap {
+    display: none;
+  }
+
+  .img-roadmap-mobile {
+    display: flex;
+    width: 99%;
+  }
+}
+
+  /* ------------------------ Nuestro Equipo -------------------------- */
+.cards-container{
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+}
+
+.card1{
+grid-column-start: 2;
+grid-column-end: 3;
+
+
+}
+
+  .cardd{
+    position: relative;
+    width: 60%;
+    height: 50vh;
+    background: #fff;
+
+    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
+    position: relative;
+  display: block;
+  
+  border-radius: calc(var(--curve) * 1px);
+  
+  text-decoration: none;
+}
+
+.imgBx{
+    position: absolute;
+    left: 50%;
+    top: -7%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 40%;
+    background:   #F6F0C4;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
+    overflow: hidden;
+}
+
+.imgBx img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cardd .content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.cardd .content .details{
+    padding: 40px;
+    text-align: center;
+    width: 100%;
+    margin-top: 130px;
+}
+
+.cardd .content .details h2{
+    font-size: 1.25em;
+    font-weight: 600;
+    color: #555;
+    line-height: 1.2em;
+}
+
+.cardd .content .details h2 span{
+    font-size: 90%;
+    font-weight: 500;
+    opacity: 0.5;
+}
+
+.card_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+
+
+ 
+}
+
+.card_btn a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 70%;
+  padding: 8px 8px;
+  line-height: 30px;
+  border-radius: 10px;
+  background: #171515;
+  color: #fff;
+  margin: 10px;
+  margin-bottom: -35px;
+  box-shadow: .5rem .5rem 1rem rgb(158, 157, 157),
+    -.5rem -.5rem 1rem #fff;
+}
+
+.card_btn a img{
+    width: 22px;
+}
+
+.card_btn a:nth-child(2) img{
+    width: 22px;
+}
+
+.card_btn a:nth-child(2){
+    background: #0e77b5;
+    color: white;
+    padding: 8px 8px;
+}
+  
+.atext::before{
+  width: 100%;
+ 
+}
+
+.atext1 .atext2{
+  padding: 10%;
+}
