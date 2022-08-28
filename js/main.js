@@ -1,12 +1,12 @@
 document.querySelector(".menu-btn").addEventListener("click", () => {
   document.querySelector(".nav-menu").classList.toggle("show");
 });
-
+/*
 ScrollReveal().reveal("#home");
 ScrollReveal().reveal("#intro", { delay: 600 });
 ScrollReveal().reveal(".features-card", { delay: 500 });
 ScrollReveal().reveal(".contact-details", { delay: 500 });
-
+*/
 /********************************************
 JS Cursor-Custom
 *********************************************/
@@ -36,7 +36,7 @@ let mjson = {
 
 
 
-  "otros-directivos": [
+  "directivos": [
       {
           "nombre": "Marie",
           "apellido": "Steverlynck",
@@ -225,24 +225,21 @@ consumo de json entre muchisimas comillas, por que si esto lo ven en artech me c
 *********************************************/
 
 
-
-let pasadoaJson = JSON.stringify(mjson); /*lo pasé a json por que en el formato de arriba el navegado lo inerpr
-                                           interpreta como un objeto de javascript, para probar nomas, pero termine leyendolo como un
-                                           objeto por que sino era mucha vuelta y casi me pongo a ver como hacer un componente de React
-                                           pero me acorde de ABAP y mejor no, por que quiero conservar mi cordura*/
-
 let card= document.querySelector(".cardd");
-let nombre= document.querySelector('.nombre');
-let puesto= document.querySelector(".puesto")
-let gitHub= document.querySelector('.atext1');
-let linkedin = document.querySelector('.atext2');
+  let nombre= document.querySelector('.nombre');
+    let puesto= document.querySelector(".puesto")
+    let gitHub= document.querySelector('.atext1');
+    let linkedin = document.querySelector('.atext2');
+    
 
-console.log(gitHub.href,linkedin.href);
 /*console.log(card, nombre.innerHTML)*/
 
  let directora = Object.values(mjson.directora);      
 
 let populate =(arr)=>{
+
+  
+
 let git= gitHub.href;
 let linked = linkedin.href;    
 
@@ -255,7 +252,7 @@ let linked = linkedin.href;
               
               nombre.innerHTML = `${arr[0]} ${arr[1]}, ${arr[2]}`;
              linkedin.href = `${arr[3]}`;
-              git = `${arr[4]}`;
+             /* git = `${arr[4]}`;*/
              
 
 
@@ -266,6 +263,40 @@ let linked = linkedin.href;
 populate(directora);
  
 
+let directivos= [...document.querySelectorAll('.directivo')];  /*agarro las cards desde el documento con un spread operator */
+
+let otrosDirectivos= Object.values(mjson.directivos); /**agarro la info de los directivos desde el json */
+
+let contenedor= document.querySelector(".directivos")
+
+console.log(directivos);
+console.log(otrosDirectivos);
 
 
 
+function returnCards(jason) {
+    return  jason.map((valuesCard,index) => `
+    <div class=\"card-grupo  directivo1\">
+    <div class="imgBx">
+    <img src="" alt="Homero Simpson" />
+    </div>
+    <div class="content">
+      <div class="details">
+      <h2 class="nombre"> ${valuesCard.nombre}  ${valuesCard.apellido} "<br /><span>" ${valuesCard.rol} "</span></h2>
+      <div class="card_btn">
+      <a class="atext1" href="${valuesCard.gitHub}" target="_blank"
+        ><i></i>GitHub<img src="../img/cardsGrupo/github-icon.png"
+      /></a>
+      <a class="atext2" href="${valuesCard.linkedin}" target="_blank"
+        ><i></i>LinkedIn<img
+          src="../img/cardsGrupo/linkedin-icon.png"
+      /></a>
+    </div>
+  </div>
+</div>
+</div>
+`).join('') ;
+  }
+
+
+ /*contenedor.innerHTML = returnCards(otrosDirectivos);*/

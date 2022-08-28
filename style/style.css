@@ -809,20 +809,35 @@ STYLE Cursor-Custom
 
 /* ------------------------ Nuestro Equipo -------------------------- */
 
+
+
+
+
 .conteiner-cards {
-  display: flex;
+ display: grid;
+  grid-auto-rows: 22rem;
+  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+  grid-auto-flow: dense;
+  grid-gap: 10rem ;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
+  min-height: 200vh;
+  min-width: 90vw;
 }
 
+
+
+
+
 .card-grupo {
+
   position: relative;
   width: 350px;
   height: 450px;
   background: #fff;
   border-radius: 20px;
   box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+  top: 60%;
 }
 
 .imgBx {
@@ -922,10 +937,61 @@ STYLE Cursor-Custom
 
 .atext1 .atext2 {
   padding: 10%;
+
 }
+
+
+.card-grupo1{      /* ubicacion de la card de la directora*/
+  
+  grid-row-start:1;
+grid-column-start:2 ;
+
+}
+
+
+
+/* ubicacion de la card de los otros directivos*/
+
+.directivos{
+
+
+  grid-row-start: 2;
+  grid-column-start:1 ;
+  grid-column-end: 5;
+  display: flex;
+  flex-direction: row;
+ 
+  
+
+ 
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* -------------------------------------- MOVÍL RESPONSIVE 400px -------------------------------------- */
 @media (max-width: 400px) {
+
+.conteiner-cards{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
   .cursor {
     display: none;
   }
@@ -962,6 +1028,7 @@ STYLE Cursor-Custom
     opacity: 0.9;
     transform: translateX(-400px);
     transition: transform 0.5s ease-in-out;
+    z-index: 99999;
   }
 
   /* CORRIGO MI LETRA Y TAMAÑO DEL MENÚ */
