@@ -807,6 +807,123 @@ STYLE Cursor-Custom
   opacity: 0.4;
 }
 
+/* ------------------------ Nuestro Equipo -------------------------- */
+
+.conteiner-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.card-grupo {
+  position: relative;
+  width: 350px;
+  height: 450px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 35px 80px rgba(0, 0, 0, 0.15);
+}
+
+.imgBx {
+  position: absolute;
+  left: 50%;
+  top: -50px;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  background: #000;
+  border-radius: 20px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+}
+
+.imgBx img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-grupo .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.card-grupo .content .details {
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+  margin-top: 130px;
+}
+
+.card-grupo .content .details h2 {
+  font-size: 1.25em;
+  font-weight: 600;
+  color: #555;
+  line-height: 1.2em;
+}
+
+.card-grupo .content .details h2 span {
+  font-size: 0.75em;
+  font-weight: 500;
+  opacity: 0.5;
+}
+
+.card_btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card_btn a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 130px;
+  padding: 8px 8px;
+  line-height: 30px;
+  border-radius: 10px;
+  background: #171515;
+  color: #fff;
+  margin: 10px;
+  margin-bottom: -35px;
+  box-shadow: 0.5rem 0.5rem 1rem rgb(158, 157, 157), -0.5rem -0.5rem 1rem #fff;
+}
+
+.card_btn a img {
+  width: 22px;
+}
+
+.card_btn a:nth-child(2) img {
+  width: 22px;
+}
+
+.card_btn a:nth-child(2) {
+  background: #0e77b5;
+  color: white;
+  padding: 8px 8px;
+}
+
+.atext::before {
+  width: 100%;
+}
+
+.atext1 .atext2 {
+  padding: 10%;
+}
+
 /* -------------------------------------- MOVÍL RESPONSIVE 400px -------------------------------------- */
 @media (max-width: 400px) {
   .cursor {
@@ -951,139 +1068,4 @@ STYLE Cursor-Custom
     display: flex;
     width: 99%;
   }
-}
-
-  /* ------------------------ Nuestro Equipo -------------------------- */
-.cards-container{
-  width: 100vw;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-
-}
-
-.card1{
-grid-column-start: 2;
-grid-column-end: 3;
-
-
-}
-
-  .cardd{
-    position: relative;
-    width: 60%;
-    height: 50vh;
-    background: #fff;
-
-    box-shadow: 0 35px 80px rgba(0,0,0,0.15);
-    position: relative;
-  display: block;
-  
-  border-radius: calc(var(--curve) * 1px);
-  
-  text-decoration: none;
-}
-
-.imgBx{
-    position: absolute;
-    left: 50%;
-    top: -7%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 40%;
-    background:   #F6F0C4;
-    border-radius: 20px;
-    box-shadow: 0 15px 50px rgba(0,0,0,0.35);
-    overflow: hidden;
-}
-
-.imgBx img{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.cardd .content{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.cardd .content .details{
-    padding: 40px;
-    text-align: center;
-    width: 100%;
-    margin-top: 130px;
-}
-
-.cardd .content .details h2{
-    font-size: 1.25em;
-    font-weight: 600;
-    color: #555;
-    line-height: 1.2em;
-}
-
-.cardd .content .details h2 span{
-    font-size: 90%;
-    font-weight: 500;
-    opacity: 0.5;
-}
-
-.card_btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100px;
-  display: flex;
-  justify-content: space-evenly;
-
-
- 
-}
-
-.card_btn a {
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 70%;
-  padding: 8px 8px;
-  line-height: 30px;
-  border-radius: 10px;
-  background: #171515;
-  color: #fff;
-  margin: 10px;
-  margin-bottom: -35px;
-  box-shadow: .5rem .5rem 1rem rgb(158, 157, 157),
-    -.5rem -.5rem 1rem #fff;
-}
-
-.card_btn a img{
-    width: 22px;
-}
-
-.card_btn a:nth-child(2) img{
-    width: 22px;
-}
-
-.card_btn a:nth-child(2){
-    background: #0e77b5;
-    color: white;
-    padding: 8px 8px;
-}
-  
-.atext::before{
-  width: 100%;
- 
-}
-
-.atext1 .atext2{
-  padding: 10%;
 }
