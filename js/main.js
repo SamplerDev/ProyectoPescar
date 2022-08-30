@@ -58,14 +58,15 @@ let mjson = {
     },
   ],
 
-  orientadora: {
+  orientadora: [
+    {
     nombre: "Paola",
     apellido: "Trippichio",
     rol: "Orientadora del equipo",
     linkedin:
       "https://www.linkedin.com/in/paola-tripicchio-2bb59122/?originalSubdomain=ar",
   },
-
+  ],
   alumnos: [
     {
       nombre: "Emanuel",
@@ -265,17 +266,17 @@ let contenedor = document.querySelector(".directivos");
 console.log(directivos);
 console.log(otrosDirectivos);
 
-function returnCards(jason) {
+function returnCards(jason,clase) {
   return jason
     .map(
       (valuesCard, index) => `
-    <div class=\"card-grupo  directivo1\">
+    <div class=\"card-grupo  ${clase}\">
     <div class="imgBx">
     <img src="" alt="Homero Simpson" />
     </div>
     <div class="content">
       <div class="details">
-      <h2 class="nombre"> ${valuesCard.nombre}  ${valuesCard.apellido} "<br /><span>" ${valuesCard.rol} "</span></h2>
+      <h2 class="nombre"> ${valuesCard.nombre}  ${valuesCard.apellido} <br /><span>" ${valuesCard.rol}" </span></h2>
       <div class="card_btn">
       <a class="atext1" href="${valuesCard.gitHub}" target="_blank"
         ><i></i>GitHub<img src="../img/cardsGrupo/github-icon.png"
@@ -293,4 +294,14 @@ function returnCards(jason) {
     .join("");
 }
 
-contenedor.innerHTML = returnCards(otrosDirectivos);
+contenedor.innerHTML = returnCards(otrosDirectivos,'directivo1');
+
+let orientadora = document.querySelector('.orientadora');
+let jorientadora = Object.values(mjson.orientadora);
+
+orientadora.innerHTML= returnCards(jorientadora,'orientadora1')
+
+
+
+
+
