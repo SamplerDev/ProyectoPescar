@@ -812,12 +812,11 @@ STYLE Cursor-Custom
 .conteiner-cards {
   display: grid;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
-  grid-auto-flow: dense;
-  grid-gap: 10rem;
+ grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1vw;
   justify-content: center;
   align-items: center;
-  min-height: 400vh;
+  min-height: 500vh;
   min-width: 90vw;
 }
 
@@ -940,71 +939,90 @@ STYLE Cursor-Custom
 /* ubicacion de la card de los otros directivos*/
 
 .directivos {
-  padding-top: 0rem;
-  gap: 7rem;
+  grid-gap: 1vw;
+  justify-content: center;
+  align-items: center;
+
+  top: 0rem;
   grid-row-start: 2;
   grid-column-start: 1;
   grid-column-end: 5;
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
 }
 
 .orientadora {
   
-  gap: 7rem;
+  grid-gap: 1vw;
+  justify-content: center;
+  align-items: center;
   grid-row-start: 3;
   grid-column-start: 1;
-  grid-column-end: 5;
-  flex-direction: row;
+  grid-column-end: 4;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 
 .orientadora1{
 
-  grid-column-start: 3;
+  grid-column-start: 2;
   grid-row-start:1 ;
-   grid-gap: 70rem;
 
+}
+.estudiantes{
+ 
+  grid-row-start:4 ;
+  grid-column-start:1 ;
+  grid-column-end: 5;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 1rem
+
+  
 }
 
 
 
 /* -------------------------------------- MOVÍL RESPONSIVE 400px -------------------------------------- */
 @media (max-width: 400px) {
+  
+  
+  /*
   .conteiner-cards {
-    display: flex;
-    flex-direction: column;
+                                              /* contenedor de las cards* /
   }
   .card-grupo1{
+                                               /* card de la directora * /
 
-top:0;
-
-  }
-
-  .conteiner-cards{
-    display: flex;
-    flex-direction: column;
-     width: 390px;
 
   }
 
+
+/* contenedor de los directivos*/
 
 
   .directivos{
 
-    display: flex;
+    display: flex;                            
     flex-direction: column;
-  margin-top:0;
+
 
 
 
   }
 
-  .orientadora{
-    top: 5rem;
+    /*  card de la orientadora*/
+
+  .orientadora{  
+    display: flex;
+  flex-direction: column;                 
+  
   }
+
+
+
   .cursor {
     display: none;
   }

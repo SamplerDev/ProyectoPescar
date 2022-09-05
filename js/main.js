@@ -278,7 +278,7 @@ function returnCards(jason,clase) {
       <div class="details">
       <h2 class="nombre"> ${valuesCard.nombre}  ${valuesCard.apellido} <br /><span>" ${valuesCard.rol}" </span></h2>
       <div class="card_btn">
-      <a class="atext1" href="${valuesCard.gitHub}" target="_blank"
+      <a class="atext1" href="${valuesCard.github}" target="_blank"
         ><i></i>GitHub<img src="../img/cardsGrupo/github-icon.png"
       /></a>
       <a class="atext2" href="${valuesCard.linkedin}" target="_blank"
@@ -301,7 +301,10 @@ let jorientadora = Object.values(mjson.orientadora);
 
 orientadora.innerHTML= returnCards(jorientadora,'orientadora1')
 
+let estudiantes = document.querySelector('.estudiantes');
+let jestudiantes = Object.values(mjson.alumnos);
 
+estudiantes.innerHTML = returnCards(jestudiantes);
 
 
 
