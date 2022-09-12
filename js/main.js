@@ -73,138 +73,161 @@ let mjson = {
       apellido: "Alderete",
       github: "https://github.com/EmanuelAl",
       linkedin: "https://www.linkedin.com/in/emanuel-alderete/",
+      foto : "../img/individuales/alderete.jpg" ,
     },
     {
       nombre: "Hernan",
       apellido: "Balderrama",
       github: "https://github.com/HernanJBalderrama",
       linkedin: "https://www.linkedin.com/in/hernanjbalderrama/",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "María Eva Medina",
       apellido: "Balderrama",
       github: "https://github.com/EvaMedina",
       linkedin: "https://www.linkedin.com/in/mariaevamedinabalderrama/",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Florencia",
       apellido: "Bascaran",
       github: "https://github.com/Florencia-Bascaran",
       linkedin: "no-tiene",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Nayla",
       apellido: "Bechara",
       github: "http://github.com/naylabechara",
       linkedin: "https://www.linkedin.com/in/nayla-bechara/",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Mauro",
       apellido: "Benitez",
       github: "https://github.com/Pandiimau",
       linkedin: "https://www.linkedin.com/in/mauroebenitez/",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Laura",
       apellido: "Calzadilla",
       github: "https://github.com/LauraVictoriaC",
       linkedin: "https://www.linkedin.com/in/laura-calzadilla",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Iván Gabriel",
       apellido: "Caravajal",
       github: "https://github.com/IvanGCGH",
       linkedin: "https://www.linkedin.com/in/ivan-gabriel-caravajal",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Celina",
       apellido: "Chiappa",
       github: "https://github.com/celinachiappa",
       linkedin: "no-tiene",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Michelle",
       apellido: "Escalante",
       github: "https://github.com/EscalanteMichelle",
       linkedin: "https://www.linkedin.com/in/michelle-mel-escalante/",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Angelica",
       apellido: "Garay",
       github: "https://github.com/angiecreators",
       linkedin: "https://www.linkedin.com/in/angiegaray/",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Maira",
       apellido: "Gomez",
       github: "https://github.com/MairaAnabella",
       linkedin: "https://www.linkedin.com/in/mairaanabellagomez/",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Andrea Joana Yanina",
       apellido: "Guaymas",
       github: "https://github.com/AndreaGuaymas",
       linkedin: "https://www.linkedin.com/in/andrea-joana-yanina-guaymas",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Belen",
       apellido: "Jessikowski",
       github: "https://github.com/beluirina",
       linkedin: "https://www.linkedin.com/in/belen-jessikowski/",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Brisa Ludmila",
       apellido: "Moreyra",
       github: "https://github.com/brisamoreyra",
       linkedin: "no-tiene",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Belén",
       apellido: "Nieto",
       github: "https://github.com/Belen-Nieto",
       linkedin: "https://www.linkedin.com/in/jbelennieto/",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Valentina",
       apellido: "Nieto",
       github: "https://github.com/carpincha",
       linkedin: "https://www.linkedin.com/in/valentina-nieto/",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Daira",
       apellido: "Portillo",
       github: "https://github.com/dairaportillo",
       linkedin: "https://www.linkedin.com/in/daira-portillo/",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Gerónimo",
       apellido: "Riesco",
       github: "https://github.com/Geronimo-Riesco",
       linkedin: "https://www.linkedin.com/in/ger%C3%B3nimo-ezequiel-riesco",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Agustina",
       apellido: "Roldán",
       github: "https://github.com/agus-plath",
       linkedin: "https://www.linkedin.com/in/agustina-roldan-/",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Alison",
       apellido: "Salazar",
       github: "https://github.com/AlisonSalazarGomez",
       linkedin: "no-tiene",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Kristel",
       apellido: "Sedano",
       github: "https://github.com/kristelsedano",
       linkedin: "https://www.linkedin.com/in/kristel-sedano-657325241/",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Sofia",
       apellido: "Senin",
       github: "https://github.com/SeninSofia",
       linkedin: "https://www.linkedin.com/in/sofia-senin/",
+      foto : "../img/individuales/" ,
     },
     {
       nombre: "Abraham",
@@ -212,12 +235,14 @@ let mjson = {
       github: "http://github.com/AbrahamTrenyan",
       linkedin:
         "https://ar.linkedin.com/in/abrahamtrenyan?trk=public_profile_browsemap",
-    },
+        foto : "../img/individuales/" ,
+      },
     {
       nombre: "Ezequiel",
       apellido: "Villalba",
       github: "https://github.com/SamplerDev",
       linkedin: "https://www.linkedin.com/in/ezequiel-villalba/",
+      foto : "../img/individuales/" ,
     },
   ],
 };
@@ -272,7 +297,7 @@ function returnCards(jason,clase) {
       (valuesCard, index) => `
     <div class=\"card-grupo  ${clase}\">
     <div class="imgBx">
-    <img src="" alt="Homero Simpson" />
+    <img src= ${valuesCard.foto} alt="Homero Simpson" />
     </div>
     <div class="content">
       <div class="details">
@@ -294,9 +319,9 @@ function returnCards(jason,clase) {
     .join("");
 }
 
-contenedor.innerHTML = returnCards(otrosDirectivos,'directivo1');
+contenedor.innerHTML = returnCards(otrosDirectivos,'directivo1'); // carga las columnas de otros directivos
 
-let orientadora = document.querySelector('.orientadora');
+let orientadora = document.querySelector('.orientadora'); // carga las columnas de la orientadora
 let jorientadora = Object.values(mjson.orientadora);
 
 orientadora.innerHTML= returnCards(jorientadora,'orientadora1')
@@ -304,7 +329,7 @@ orientadora.innerHTML= returnCards(jorientadora,'orientadora1')
 let estudiantes = document.querySelector('.estudiantes');
 let jestudiantes = Object.values(mjson.alumnos);
 
-estudiantes.innerHTML = returnCards(jestudiantes);
+estudiantes.innerHTML = returnCards(jestudiantes, "estudiantesCard");
 
 
 
