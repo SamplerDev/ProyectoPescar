@@ -45,13 +45,15 @@ let mjson = {
       rol: "Coordinación de programas y RR. II.",
       linkedin:
         "https://www.linkedin.com/in/marie-steverlynck-97a42b194/?trk=public_profile_browsemap_profile-result-card_result-card_full-click&originalSubdomain=ar",
-    },
+        foto : "../img/individuales/marie.jfif" ,    
+      },
     {
       nombre: "Carolina",
       apellido: "Bianchetti",
       rol: "Responsable de intermediación laboral y red de egresados",
       linkedin:
         "https://www.linkedin.com/in/carolina-bianchetti-88745a70/?originalSubdomain=ar",
+        foto : "../img/individuales/carolina.jfif" ,   
     },
     {
       nombre: "Florencia",
@@ -59,6 +61,7 @@ let mjson = {
       rol: "Coordinación de programas y Líder de Capacitación",
       linkedin:
         "https://www.linkedin.com/in/florencia-cocorullo-8086ab92/?originalSubdomain=ar",
+        foto : "../img/individuales/florencia.jfif" ,   
     },
   ],
 
@@ -69,6 +72,7 @@ let mjson = {
     rol: "Orientadora del equipo",
     linkedin:
       "https://www.linkedin.com/in/paola-tripicchio-2bb59122/?originalSubdomain=ar",
+      foto : "../img/individuales/paola.jfif" ,  
   },
   ],
   alumnos: [
@@ -161,7 +165,7 @@ let mjson = {
       apellido: "Guaymas",
       github: "https://github.com/AndreaGuaymas",
       linkedin: "https://www.linkedin.com/in/andrea-joana-yanina-guaymas",
-      foto : "../img/individuales/guaymas.jpg" ,
+      foto : "../img/individuales/guaymas.jpeg" ,
     },
     {
       nombre: "Belen",
