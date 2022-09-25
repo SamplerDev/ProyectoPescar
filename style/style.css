@@ -817,7 +817,7 @@ STYLE Cursor-Custom
   grid-gap: 10px;
    justify-content: center;
   align-items: center;
-  height: 10vh;
+  height: 11vh;
   min-width: 90vw;
 }
 
@@ -1010,9 +1010,10 @@ top:500px;
 /* -------------------------------------- MOVÍL RESPONSIVE 400px -------------------------------------- */
 @media (max-width: 400px) {
 
+
 .conteiner-cards{
   display:inline;
-  
+  height: 12vh;
   width: 200px;;
 }  
   
@@ -1030,6 +1031,7 @@ h2 span{
 
 .card-grupo{
 height: 250px;
+width: 350px;
   
 }
 
