@@ -276,9 +276,9 @@ let populate = (arr) => {
   for (var i = 0; i < arr.length; i++) {
     /*console.log(arr[i]);*/
 
-    console.log(arr[0], arr[1], arr[3], linked);
+  
 
-    nombre.innerHTML = `${arr[0]} ${arr[1]}, ${arr[2]}`;
+    nombre.innerHTML = `${arr[0]} ${arr[1]}`;
     linkedin.href = `${arr[3]}`;
     /* git = `${arr[4]}`;*/
   }
@@ -312,10 +312,10 @@ function returnCards(jason,clase) {
       <h2 class="nombre"> ${valuesCard.nombre}  ${valuesCard.apellido} <br /><span>" ${valuesCard.rol}" </span></h2>
       <div class="card_btn">
       <a class="atext1" href="${valuesCard.github}" target="_blank"
-        ><i></i>GitHub<img src="../img/cardsGrupo/github-icon.png"
+        ><i class="texto" >GitHub</i><img src="../img/cardsGrupo/github-icon.png"
       /></a>
       <a class="atext2" href="${valuesCard.linkedin}" target="_blank"
-        ><i></i>LinkedIn<img
+        ><i class="texto">LinkedIn</i><img
           src="../img/cardsGrupo/linkedin-icon.png"
       /></a>
     </div>

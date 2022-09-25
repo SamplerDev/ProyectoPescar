@@ -926,6 +926,8 @@ STYLE Cursor-Custom
   width: 100%;
 }
 
+
+
 .atext1 .atext2 {
   padding: 10%;
 }
@@ -995,45 +997,100 @@ top:500px;
 
 }
 
+.imgBx{
+
+  top: 0px;
+}
+
+
+
+
 
 
 /* -------------------------------------- MOVÍL RESPONSIVE 400px -------------------------------------- */
 @media (max-width: 400px) {
-  
-  
-  /*
-  .conteiner-cards {
-                                              /* contenedor de las cards* /
-  }
-  .card-grupo1{
-                                               /* card de la directora * /
 
+.conteiner-cards{
+  display:inline;
+  
+  width: 200px;;
+}  
+  
+.texto{
+  display: none;
+}
+.nombre{
+  margin-top: 150px;
+  color: black;
+  height: 1px;
+}
+h2 span{
+  display: none;
+}
+
+.card-grupo{
+height: 250px;
+  
+}
+
+.card_btn{
+
+  margin-bottom: 150px;
+}
+
+  /* card de la directora */
+  
+
+  .card-grupo1{
+                                                 
+  
+    margin-top:-150px;
+    margin-left:-5px ;
+    
 
   }
 
 
 /* contenedor de los directivos*/
 
-
+.imgBx{
+  width: 120px ;
+  height: 120px;
+}
   .directivos{
 
-    display: flex;                            
+    display: flex ;
     flex-direction: column;
-
-
+   
+    gap: 30px;
+      gap: 45px;
+     margin-left: -15px;
+     top: 150px;
 
 
   }
 
-    /*  card de la orientadora*/
+ 
+
+    /*  card de la orientadora*/  
 
   .orientadora{  
     display: flex;
-  flex-direction: column;                 
+  flex-direction: column;
+  margin-right: 75px;
+
   
   }
 
+  .estudiantes{
 
+    display: flex ;
+    flex-direction: column;
+   
+    gap: 30px;
+    margin-top: -40px;
+   margin-left: -5px;
+  }
 
   .cursor {
     display: none;
